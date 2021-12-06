@@ -1,0 +1,5 @@
+*gfmdoc.txt* Basic GitHub-flavored Markdown helpers for day to day use.
+*gfmdoc*
+
+For up to date documentation, check the function comments in the source under
+gfmdoc/autoload/markdown. Thanks!
