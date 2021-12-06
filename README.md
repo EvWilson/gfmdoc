@@ -13,23 +13,37 @@ or is straight up wrong, please do feel free to file an issue!
 ## Installation
 
 ### If using [**vim-plug**](https://github.com/junegunn/vim-plug) (for Vim or Neovim)
- * Open vim config
- * Write `Plug 'EvWilson/gfmdoc'` inside the `plug` command:
-  ```vim
-  call plug#begin('~/.vim/plugged')
-     Plug 'EvWilson/gfmdoc'
-  call plug#end()
-  ```
-  * Restart vim / reload vim config
-  * type `:PlugInstall`
+- Open vim config
+- Write `Plug 'EvWilson/gfmdoc'` inside the `plug` command:
+```vim
+call plug#begin('~/.vim/plugged')
+ Plug 'EvWilson/gfmdoc'
+call plug#end()
+```
+- Restart vim / reload vim config
+- type `:PlugInstall`
 
 ### If using **Vim**:
- * Use Vim 8 or newer
- * `mkdir -p ~/.vim/pack/plugins/start/`
- * `cd ~/.vim/pack/plugins/start/`
- * `git clone https://github.com/EvWilson/gfmdoc.git`
+- Use Vim 8 or newer
+- `mkdir -p ~/.vim/pack/plugins/start/`
+- `cd ~/.vim/pack/plugins/start/`
+- `git clone https://github.com/EvWilson/gfmdoc.git`
 
 ### If using **Neovim**:
- * `mkdir -p ~/.local/share/nvim/site/pack/plugins/start/`
- * `cd ~/.local/share/nvim/site/pack/plugins/start/`
- * `git clone https://github.com/EvWilson/gfmdoc.git`
+- `mkdir -p ~/.local/share/nvim/site/pack/plugins/start/`
+- `cd ~/.local/share/nvim/site/pack/plugins/start/`
+- `git clone https://github.com/EvWilson/gfmdoc.git`
+
+## Configuration
+
+This sample is how I've set up the included functions in my `init.vim` as of the
+time of writing:
+```vim
+nnoremap <c-j> :call gfmdoc#NextInList('down')<CR>
+nnoremap <c-k> :call gfmdoc#NextInList('up')<CR>
+nnoremap <Leader>tt :call gfmdoc#ToggleTodo()<CR>
+nnoremap <Leader>tf :call gfmdoc#WrapLine(80)<CR>
+nnoremap <Leader>tg :call gfmdoc#FormatTable()<CR>
+```
+Be sure to read the function-level comments to see explanations of what the
+passed parameters mean. Or just copy it verbatim and let it rock, you do you.
