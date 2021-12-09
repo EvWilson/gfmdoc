@@ -65,7 +65,7 @@ function! gfmdoc#WrapLine(width)
         let l:lnum += 1
         " Get the line and check if it seems to be in a block construct or not
         let l:line = getline(lnum)
-        if match(trim(line), '\v^[^#>\-\|]+') != -1 || trim(line) == ''
+        if match(trim(line), '\v^[^#>\-\|\*\+]+') != -1 || trim(line) == ''
             let l:inblock = 'f'
         else
             let l:inblock = 't'
