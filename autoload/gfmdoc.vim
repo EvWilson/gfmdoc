@@ -88,7 +88,7 @@ function! gfmdoc#WrapLine(width)
     endwhile
     " Flush line buffer one last time
     if len(curline)
-        let l:lines += LineTextWrap(trim(curline), a:width)
+        let l:lines += s:LineTextWrap(trim(curline), a:width)
     endif
     " Output formatted lines
     let l:lnum = 1
