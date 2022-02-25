@@ -53,6 +53,7 @@ endfunction
 
 " Wraps all text lines in current Markdown buffer at specified width
 function! gfmdoc#WrapLine(width)
+    echom a:width
     const l:save_cursor = getpos(".")
     const l:numlines = line('$')
     let l:lnum = 0

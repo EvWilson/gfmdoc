@@ -38,12 +38,14 @@ call plug#end()
 
 This sample is how I've set up the included functions in my `init.vim` as of the
 time of writing:
+
 ```vim
-nnoremap <c-j> :call gfmdoc#NextInList('down')<CR>
-nnoremap <c-k> :call gfmdoc#NextInList('up')<CR>
-nnoremap <Leader>tt :call gfmdoc#ToggleTodo()<CR>
-nnoremap <Leader>tf :call gfmdoc#WrapLine(80)<CR>
-nnoremap <Leader>tg :call gfmdoc#FormatTable()<CR>
+nnoremap <c-j> :GFMDUpNextList<CR>
+nnoremap <c-k> :GFMDDownNextList<CR>
 ```
-Be sure to read the function-level comments to see explanations of what the
-passed parameters mean. Or just copy it verbatim and let it rock, you do you.
+
+`GFMDToggleTodo`, `GFMDWrapLine`, and `GFMDFormatTable` are available as editor
+commands in Markdown files. Set `g:gfmdoc_wrap_line` to your preferred integer
+value to control `GFMDWrapLine` in your config. Be sure to read the
+function-level comments to see explanations of what the passed parameters mean.
+Or just copy it verbatim and let it rock, you do you.
