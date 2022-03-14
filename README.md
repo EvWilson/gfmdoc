@@ -40,8 +40,8 @@ This sample is how I've set up the included functions in my `init.vim` as of the
 time of writing:
 
 ```vim
-nnoremap <c-j> :GFMDUpNextList<CR>
-nnoremap <c-k> :GFMDDownNextList<CR>
+nnoremap <c-j> :GFMDDownNextList<CR>
+nnoremap <c-k> :GFMDUpNextList<CR>
 ```
 
 `GFMDToggleTodo`, `GFMDWrapLine`, and `GFMDFormatTable` are available as editor
